@@ -8,18 +8,20 @@ function autoFocusSearchInput() {
     }
 }
 
-const images = [
+const items = [
     {
         id: 1,
-        url: "https://static.wixstatic.com/media/a4f6c8_f9c96ee36ee747a2a8e8da2d1ec9b0a1~mv2.png",
-        keywords: ["taxi", "Taxis", "taxistas"],
-        link: "https://eatcomercial01.wixsite.com/website-1/turitaxis",
+        videoUrl: "https://www.example.com/video-sombrero-1.mp4", // Reemplaza con el enlace del video
+        title: "Sombrero Veguero",
+        description: "Sombrero tradicional del llano, ideal para todas las ocasiones.",
+        link: "https://eatcomercial01.wixsite.com/website-1/sombrero-veguero",
     },
     {
         id: 2,
-        url: "https://static.wixstatic.com/media/a4f6c8_04ad6e3130d04f4dada287584d18cf01~mv2.png",
-        keywords: ["muebles js", "distribuidoras", "fabrica", "alfombras", "muebles", "camas", "colchones", "espaldares", "sabanas", "tendidos", "artesanias", "toldillos", "cuadros", "sofas", "peinadores", "nocheros", "semanarios", "closets", "salas", "comedores"],
-        link: "https://eatcomercial01.wixsite.com/website-1/copy-of-locales-8/locales",
+        videoUrl: "https://www.example.com/video-sombrero-2.mp4", // Reemplaza con el enlace del video
+        title: "Sombrero Llanero",
+        description: "Elegante sombrero de ala ancha, perfecto para el campo.",
+        link: "https://eatcomercial01.wixsite.com/website-1/sombrero-llanero",
     },
 ];
 
@@ -40,65 +42,75 @@ function toggleLoadingIndicator(show) {
     loadingOverlay.style.display = show ? "flex" : "none";
 }
 
-// Mostrar imágenes en la galería (coincidencias exactas y parciales)
-function displayImages(filteredImages, partialMatches = []) {
-    const gallery = document.getElementById("gallery");
-    gallery.innerHTML = "";
+// Mostrar artículos en el catálogo
+function displayItems(filteredItems, partialMatches = []) {
+    const catalogGallery = document.getElementById("catalog-gallery");
+    catalogGallery.innerHTML = "";
 
-    if (filteredImages.length === 0 && partialMatches.length === 0) {
-        gallery.innerHTML = "<p>No hay resultados relacionados.</p>";
+    if (filteredItems.length === 0 && partialMatches.length === 0) {
+        catalogGallery.innerHTML = "<p>No hay resultados relacionados.</p>";
         return;
     }
 
-    if (filteredImages.length > 0) {
-        const exactTitle = document.createElement("h3");
-        exactTitle.textContent = "Resultados principales:";
-        gallery.appendChild(exactTitle);
+    if (filteredItems.length > 0) {
+        filteredItems.forEach((item) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("item");
 
-        filteredImages.forEach((image) => {
-            const anchor = document.createElement("a");
-            anchor.href = image.link;
-            anchor.target = "_blank";
+            const video = document.createElement("video");
+            video.src = item.videoUrl;
+            video.controls = true;
+            video.alt = item.title;
 
-            const img = document.createElement("img");
-            img.src = image.url;
-            img.alt = image.keywords.join(", ");
+            const info = document.createElement("div");
+            info.classList.add("info");
+            info.innerHTML = `
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+                <a href="${item.link}" target="_blank">Ver más</a>
+            `;
 
-            anchor.appendChild(img);
-            gallery.appendChild(anchor);
+            itemDiv.appendChild(video);
+            itemDiv.appendChild(info);
+            catalogGallery.appendChild(itemDiv);
         });
     }
 
     if (partialMatches.length > 0) {
         const separator = document.createElement("hr");
-        gallery.appendChild(separator);
+        catalogGallery.appendChild(separator);
 
-        const partialTitle = document.createElement("h3");
-        partialTitle.textContent = "Coincidencias relacionadas:";
-        gallery.appendChild(partialTitle);
+        partialMatches.forEach(({ item, matches }) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("item");
 
-        partialMatches.forEach(({ image, matches }) => {
-            const anchor = document.createElement("a");
-            anchor.href = image.link;
-            anchor.target = "_blank";
+            const video = document.createElement("video");
+            video.src = item.videoUrl;
+            video.controls = true;
+            video.alt = item.title;
 
-            const img = document.createElement("img");
-            img.src = image.url;
-            img.alt = image.keywords.join(", ");
+            const info = document.createElement("div");
+            info.classList.add("info");
+            info.innerHTML = `
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+                <a href="${item.link}" target="_blank">Ver más</a>
+            `;
 
-            anchor.appendChild(img);
-            gallery.appendChild(anchor);
+            itemDiv.appendChild(video);
+            itemDiv.appendChild(info);
+            catalogGallery.appendChild(itemDiv);
 
             const matchesText = document.createElement("p");
             matchesText.textContent = `Palabras relacionadas: ${matches.join(", ")}`;
             matchesText.style.fontSize = "12px";
             matchesText.style.color = "#555";
-            gallery.appendChild(matchesText);
+            catalogGallery.appendChild(matchesText);
         });
     }
 }
 
-function searchImages() {
+function searchItems() {
     const query = normalizeString(document.getElementById("searchInput").value.trim());
     if (!query) {
         alert("Escribe aquí lo que buscas.");
@@ -116,28 +128,28 @@ function searchImages() {
 
     toggleLoadingIndicator(true);
 
-    const filteredImages = [];
+    const filteredItems = [];
     const partialMatches = [];
 
-    images.forEach((image) => {
+    items.forEach((item) => {
         const matches = queryWords.filter((word) =>
-            image.keywords.some((keyword) => normalizeString(keyword).includes(word))
+            item.title.toLowerCase().includes(word)
         );
 
         if (matches.length === queryWords.length) {
-            filteredImages.push(image);
+            filteredItems.push(item);
         } else if (matches.length > 0) {
-            partialMatches.push({ image, matches });
+            partialMatches.push({ item, matches });
         }
     });
 
-    displayImages(filteredImages, partialMatches);
+    displayItems(filteredItems, partialMatches);
     toggleLoadingIndicator(false);
 }
 
 function resetGallery() {
     document.getElementById("searchInput").value = "";
-    displayImages(images);
+    displayItems(items);
 }
 
 autoFocusSearchInput();

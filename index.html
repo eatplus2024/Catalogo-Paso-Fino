@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar en DeliPlan</title>
+    <title>Catálogo Virtual - Sombrerería Paso Fino</title>
     <link rel="stylesheet" href="style.css">
     <style id="dynamic-style"></style> <!-- Estilo dinámico -->
 </head>
 <body>
     <div id="loading-overlay">
         <div class="spinner"></div>
-        <p class="loading-text">Buscando...</p>
+        <p class="loading-text">Cargando catálogo...</p>
     </div>
     <header>
-        <h1 id="main-title">Buscar en DeliPlan</h1>
+        <h1 id="main-title">Catálogo de Sombreros y Artesanías</h1>
     </header>
     <section class="search-container">
         <div id="search-wrapper">
             <input 
                 type="text" 
                 id="searchInput" 
-                placeholder="Escribe el establecimiento o producto que necesitas" 
-                oninput="searchImages()">
+                placeholder="Busca tu sombrero o artesanía favorita" 
+                oninput="searchItems()">
             <button id="resetBtn" onclick="resetGallery()">X</button>
         </div>
     </section>
-    <div id="gallery"></div>
+    <div id="catalog-gallery"></div>
     <footer>
-        DeliPlan Yopal
+        Sombrerería Paso Fino - Hecho para ti
     </footer>
     <script src="script.js"></script>
 </body>

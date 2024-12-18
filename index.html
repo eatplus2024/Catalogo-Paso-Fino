@@ -1,29 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SorteoApp</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Catálogo de Sombreros</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div class="main-container">
-        <img src="https://cdn.pixabay.com/photo/2024/08/31/18/47/18-47-52-728_960_720.png" alt="Logotipo" class="logo">
-        <h1>SorteoApp</h1>
-        <p>Ingresa al sorteo:</p>
-        <input type="text" id="name" placeholder="Tu nombre">
-        <button onclick="addParticipant()">Participar</button>
-
-        <h2>Participantes</h2>
-        <div class="glass-box">
-            <ul id="participantsList"></ul>
-        </div>
-
-        <h2>Ganador</h2>
-        <div id="digitalBoard">Nadie ha ganado aún</div>
-        <button onclick="pickWinner()">Elegir Ganador</button>
+    <div id="catalog-container">
+        <!-- El catálogo será generado dinámicamente -->
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,48 +1,49 @@
-let participants = [];
+document.addEventListener("DOMContentLoaded", () => {
+    // Contenedor principal del catálogo
+    const catalogContainer = document.getElementById("catalog-container");
 
-function addParticipant() {
-    const name = document.getElementById('name').value;
-    if (name) {
-        participants.push(name);
-        updateParticipantsList();
-        document.getElementById('name').value = '';
-    } else {
-        alert("Por favor, ingresa un nombre.");
-    }
-}
+    // Lista de sombreros con sus datos
+    const sombreros = [
+        {
+            title: "Sombrero Llanero",
+            videoSrc: "https://example.com/video1.mp4",
+            whatsappLink: "https://wa.me/1234567890?text=Hola,%20quiero%20cotizar%20el%20Sombrero%20Llanero"
+        },
+        {
+            title: "Sombrero Vaquero",
+            videoSrc: "https://example.com/video2.mp4",
+            whatsappLink: "https://wa.me/1234567890?text=Hola,%20quiero%20cotizar%20el%20Sombrero%20Vaquero"
+        }
+        // Agrega más sombreros aquí si es necesario
+    ];
 
-function updateParticipantsList() {
-    const list = document.getElementById('participantsList');
-    list.innerHTML = '';
-    participants.forEach(participant => {
-        const li = document.createElement('li');
-        li.textContent = participant;
-        list.appendChild(li);
+    // Generar dinámicamente cada sombrero
+    sombreros.forEach((sombrero) => {
+        // Crear contenedor del video
+        const videoItem = document.createElement("div");
+        videoItem.className = "video-item";
+
+        // Título
+        const title = document.createElement("h2");
+        title.textContent = sombrero.title;
+
+        // Video
+        const video = document.createElement("video");
+        video.src = sombrero.videoSrc;
+        video.controls = true;
+
+        // Botón de cotizar
+        const button = document.createElement("a");
+        button.href = sombrero.whatsappLink;
+        button.target = "_blank";
+        button.textContent = "Cotizar";
+
+        // Añadir elementos al contenedor del video
+        videoItem.appendChild(title);
+        videoItem.appendChild(button);
+        videoItem.appendChild(video);
+
+        // Añadir el contenedor del video al catálogo
+        catalogContainer.appendChild(videoItem);
     });
-}
-
-function pickWinner() {
-    if (participants.length === 0) {
-        alert("No hay participantes para el sorteo.");
-        return;
-    }
-
-    const digitalBoard = document.getElementById('digitalBoard');
-    let currentIndex = 0;
-    const speed = 100; // Velocidad de cambio de nombre en milisegundos
-    const duration = 5000; // Duración total del efecto en milisegundos
-
-    digitalBoard.classList.remove('winner');
-
-    const interval = setInterval(() => {
-        digitalBoard.textContent = participants[currentIndex];
-        currentIndex = (currentIndex + 1) % participants.length;
-    }, speed);
-
-    setTimeout(() => {
-        clearInterval(interval);
-        const winnerIndex = Math.floor(Math.random() * participants.length);
-        digitalBoard.textContent = `¡El ganador es: ${participants[winnerIndex]}!`;
-        digitalBoard.classList.add('winner');
-    }, duration);
-}
+});

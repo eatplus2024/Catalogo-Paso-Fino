@@ -1,26 +1,27 @@
-/* Estilo general */
+/* Configuración básica del cuerpo */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: url('https://example.com/imagen-vaqueria.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Contenedor principal del catálogo */
 #catalog-container {
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
+    width: 90%;
+    max-width: 800px;
 }
 
-/* Estilo de cada video con su título y botón */
+/* Estilo para cada video */
 .video-item {
-    width: 90%;
-    max-width: 600px;
     position: relative;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -28,41 +29,41 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Títulos */
+/* Título del sombrero */
 .video-item h2 {
     margin: 0;
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
     font-size: 18px;
+    color: #fff;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    color: #fff;
+    text-align: center;
 }
 
-/* Botón Cotizar */
+/* Botón de cotizar */
 .video-item a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #007bff;
-    padding: 10px 15px;
-    border-radius: 5px;
     position: absolute;
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
 .video-item a:hover {
     background-color: #0056b3;
 }
 
-/* Videos */
-video {
+/* Video */
+.video-item video {
     width: 100%;
     display: block;
 }

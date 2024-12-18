@@ -1,40 +1,60 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const catalogContainer = document.getElementById("catalog-container");
+document.addEventListener("DOMContentLoaded", function () {
+    // Reproducir el primer video automáticamente cuando se carga la página
+    const firstVideo = document.querySelector('iframe');
+    if (firstVideo) {
+        firstVideo.src += "?autoplay=1";
+    }
 
-    const sombreros = [
-        {
-            title: "Sombrero Llanero",
-            videoSrc: "https://example.com/video1.mp4",
-            whatsappLink: "https://wa.me/1234567890?text=Hola,%20quiero%20cotizar%20el%20Sombrero%20Llanero"
-        },
-        {
-            title: "Sombrero Vaquero",
-            videoSrc: "https://example.com/video2.mp4",
-            whatsappLink: "https://wa.me/1234567890?text=Hola,%20quiero%20cotizar%20el%20Sombrero%20Vaquero"
-        }
-    ];
+    // Función para ajustar la visibilidad del video
+    function resizeVideos() {
+        const videos = document.querySelectorAll('iframe');
+        videos.forEach(video => {
+            // Ajustar la altura del video según el tamaño de la pantalla
+            const windowWidth = window.innerWidth;
+            if (windowWidth <= 768) {
+                video.style.height = '250px';  // Más pequeño en móviles
+            } else {
+                video.style.height = '360px';  // Tamaño estándar en pantallas más grandes
+            }
+        });
+    }
 
-    sombreros.forEach((sombrero) => {
-        const videoItem = document.createElement("div");
-        videoItem.className = "video-item";
+    // Función para mostrar u ocultar el menú
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
+    }
 
-        const title = document.createElement("h2");
-        title.textContent = sombrero.title;
+    // Inicializar ajustes de tamaño de video
+    resizeVideos();
+    window.addEventListener('resize', resizeVideos);
 
-        const video = document.createElement("video");
-        video.src = sombrero.videoSrc;
-        video.controls = true;
-        video.autoplay = true;
+    // Si se desea más interactividad, aquí se pueden agregar más eventos
+    // Ejemplo: Mostrar un mensaje al hacer clic en el botón de cotizar
+    const cotizarButtons = document.querySelectorAll('.cotizar-btn');
+    cotizarButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            alert("¡Serás redirigido a WhatsApp para cotizar!");
+        });
+    });
+});
 
-        const button = document.createElement("a");
-        button.href = sombrero.whatsappLink;
-        button.target = "_blank";
-        button.textContent = "Cotizar";
+// Este bloque hace que el primer video sea el que se reproduce inicialmente
+window.addEventListener('load', () => {
+    // Seleccionamos el primer iframe y le añadimos autoplay
+    const firstVideo = document.querySelector('iframe');
+    if (firstVideo) {
+        firstVideo.src += "?autoplay=1";
+    }
+});
 
-        videoItem.appendChild(title);
-        videoItem.appendChild(button);
-        videoItem.appendChild(video);
-
-        catalogContainer.appendChild(videoItem);
+// Asegura que los botones de cotización abran correctamente WhatsApp
+document.querySelectorAll('.cotizar-btn').forEach(button => {
+    button.addEventListener('click', function (event) {
+        const videoTitle = event.target.previousElementSibling.textContent;  // Título del sombrero
+        const message = encodeURIComponent(`Quiero cotizar el sombrero: ${videoTitle}`);
+        const phoneNumber = '1234567890';  // Número de WhatsApp
+        const url = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(url, '_blank');
     });
 });

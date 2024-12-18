@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-image: url('https://www.example.com/imagen-fondo.jpg'); /* Reemplaza con la imagen de fondo */
+    background-image: url('https://www.ecoticias.com/naturaleza/life-el-hito-laguna'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
 }
@@ -19,43 +19,6 @@ h1 {
     margin-bottom: 10px;
     color: #ff5722;
     text-shadow: 0 0 5px #ff5722, 0 0 15px #ff5722;
-}
-
-.search-container {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-}
-
-.search-container input[type="text"] {
-    width: calc(100% - 120px); /* Espacio para los botones */
-    padding: 15px 20px;
-    font-size: 16px;
-    border: 2px solid #ff5722;
-    border-radius: 25px;
-    outline: none;
-    transition: all 0.3s ease;
-    color: #333;
-    background: #fff;
-    margin-right: 10px;
-}
-
-.search-container input[type="text"]:focus {
-    border-color: #ff5722;
-    box-shadow: 0 0 10px #ff5722, 0 0 20px #ff5722;
-}
-
-#resetBtn {
-    background-color: transparent;
-    border: none;
-    color: #ff5722;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-#resetBtn:hover {
-    color: #b43f29;
 }
 
 #catalog-gallery {

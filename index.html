@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Sombreros</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <title>Buscar en DeliPlan</title>
+    <link rel="stylesheet" href="style.css">
+    <style id="dynamic-style"></style> <!-- Estilo dinámico -->
 </head>
 <body>
-    <div id="catalog-container">
-        <!-- El contenido será generado dinámicamente -->
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+        <p class="loading-text">Buscando...</p>
     </div>
+    <header>
+        <h1 id="main-title">Buscar en DeliPlan</h1>
+    </header>
+    <section class="search-container">
+        <div id="search-wrapper">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Escribe el establecimiento o producto que necesitas" 
+                oninput="searchImages()">
+            <button id="resetBtn" onclick="resetGallery()">X</button>
+        </div>
+    </section>
+    <div id="gallery"></div>
+    <footer>
+        DeliPlan Yopal
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -52,5 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.appendChild(overlay);
         gallery.appendChild(item);
+
+        function redirectToWhatsApp(productName) {
+    const phoneNumber = "+573219943910";
+    const message = `Hola, quiero saber el precio de este sombrero: ${productName}`;
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, "_blank");
+}
     });
 });

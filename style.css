@@ -2,76 +2,86 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1482192501347-26a1bcb08b75');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    text-align: center;
 }
 
 header {
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 h1 {
     font-size: 32px;
-    margin-bottom: 10px;
+    margin: 0;
     color: #ff5722;
-    text-shadow: 0 0 5px #ff5722, 0 0 15px #ff5722;
+    text-shadow: 0px 0px 10px rgba(255, 87, 34, 0.8);
 }
 
 #catalog-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin: 30px auto;
-    width: 90%;
+    gap: 20px;
+    padding: 20px;
 }
 
 #catalog-gallery .item {
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
+    height: 200px;
     position: relative;
-    border: 2px solid #ff5722;
-    border-radius: 10px;
     overflow: hidden;
-    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-#catalog-gallery .item video {
+#catalog-gallery .item iframe {
     width: 100%;
-    height: auto;
+    height: 100%;
+    border: none;
+    pointer-events: none; /* Evita clics sobre el video */
 }
 
-#catalog-gallery .item .info {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
+#catalog-gallery .overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    pointer-events: auto;
 }
 
-#catalog-gallery .item .info h3 {
+#catalog-gallery .overlay h3 {
+    margin: 0 0 10px;
     font-size: 18px;
-    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-#catalog-gallery .item .info p {
-    font-size: 14px;
-}
-
-#catalog-gallery .item .info a {
-    display: inline-block;
-    margin-top: 10px;
+#catalog-gallery .overlay a {
     padding: 8px 15px;
     background-color: #ff5722;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
     transition: background-color 0.3s;
 }
 
-#catalog-gallery .item .info a:hover {
+#catalog-gallery .overlay a:hover {
     background-color: #e64a19;
 }

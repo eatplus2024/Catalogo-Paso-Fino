@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Cambiar el título principal
-    const mainTitle = document.getElementById("main-title");
-    mainTitle.textContent = "Catálogo Sombrerería Paso Fino";
-
-    // Crear galería de videos
     const videos = [
         {
             title: "Sombrero Veguero",
@@ -27,37 +22,35 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     ];
 
-    const catalogGallery = document.getElementById("catalog-gallery");
+    const gallery = document.getElementById("catalog-gallery");
 
     videos.forEach((video) => {
-        // Crear contenedor del video
         const item = document.createElement("div");
         item.className = "item";
 
-        // Agregar iframe del video
+        // Video embed
         const iframe = document.createElement("iframe");
         iframe.src = video.videoUrl;
-        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allow =
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
         iframe.allowFullscreen = true;
         item.appendChild(iframe);
 
-        // Crear overlay
+        // Overlay con título y botón
         const overlay = document.createElement("div");
         overlay.className = "overlay";
 
-        // Agregar título
         const title = document.createElement("h3");
         title.textContent = video.title;
         overlay.appendChild(title);
 
-        // Agregar botón
-        const link = document.createElement("a");
-        link.href = video.link;
-        link.target = "_blank";
-        link.textContent = "Ver más";
-        overlay.appendChild(link);
+        const button = document.createElement("a");
+        button.href = video.link;
+        button.target = "_blank";
+        button.textContent = "Ver más";
+        overlay.appendChild(button);
 
         item.appendChild(overlay);
-        catalogGallery.appendChild(item);
+        gallery.appendChild(item);
     });
 });

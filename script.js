@@ -3,26 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Sombrero Veguero",
             videoUrl: "https://www.youtube.com/embed/jxqhhSbrOz0",
-            link: "https://eatcomercial01.wixsite.com/website-1/sombrero-veguero",
         },
         {
             title: "Sombrero Llanero",
             videoUrl: "https://www.youtube.com/embed/jxqhhSbrOz0",
-            link: "https://eatcomercial01.wixsite.com/website-1/sombrero-llanero",
         },
         {
             title: "Sombrero de Fiesta",
             videoUrl: "https://www.youtube.com/embed/jxqhhSbrOz0",
-            link: "https://eatcomercial01.wixsite.com/website-1/sombrero-fiesta",
         },
         {
             title: "Sombrero Tradicional",
             videoUrl: "https://www.youtube.com/embed/jxqhhSbrOz0",
-            link: "https://eatcomercial01.wixsite.com/website-1/sombrero-tradicional",
         },
     ];
 
     const gallery = document.getElementById("catalog-gallery");
+
+    // Función para redirigir a WhatsApp
+    function redirectToWhatsApp(productName) {
+        const phoneNumber = "+573219943910";
+        const message = `Hola, quiero saber el precio de este sombrero: ${productName}`;
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, "_blank");
+    }
 
     videos.forEach((video) => {
         const item = document.createElement("div");
@@ -44,20 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
         title.textContent = video.title;
         overlay.appendChild(title);
 
-        const button = document.createElement("a");
-        button.href = video.link;
-        button.target = "_blank";
-        button.textContent = "Ver más";
+        const button = document.createElement("button");
+        button.textContent = "Cotizar";
+        button.className = "quote-button";
+        button.addEventListener("click", () => redirectToWhatsApp(video.title)); // Redirección a WhatsApp
         overlay.appendChild(button);
 
         item.appendChild(overlay);
         gallery.appendChild(item);
-
-        function redirectToWhatsApp(productName) {
-    const phoneNumber = "+573219943910";
-    const message = `Hola, quiero saber el precio de este sombrero: ${productName}`;
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, "_blank");
-}
     });
 });

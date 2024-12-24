@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
             title: "Sombrero Veguero",
-            videoUrl: "https://www.youtube.com/embed/jxqhhSbrOz0",
+            videoUrl: "https://photos.google.com/search/_tv_V%C3%ADdeos/photo/AF1QipMhXeQJAPNVnzbpHtWWPgmZzUlosqLDHmDdCqnY",
         },
         {
             title: "Sombrero Llanero",
-            videoUrl: "https://www.youtube.com/embed/jxqhhSbrOz0",
+            videoUrl: "https://photos.google.com/search/_tv_V%C3%ADdeos/photo/AF1QipMhXeQJAPNVnzbpHtWWPgmZzUlosqLDHmDdCqnY",
         },
     ];
 

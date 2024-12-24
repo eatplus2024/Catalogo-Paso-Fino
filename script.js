@@ -9,12 +9,12 @@ function redirectToWhatsApp(productName) {
 document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
-            title: "Sombrero Veguero",
-            videoUrl: "https://photos.google.com/search/_tv_V%C3%ADdeos/photo/AF1QipMhXeQJAPNVnzbpHtWWPgmZzUlosqLDHmDdCqnY",
+            title: "Sombrero Aguadeño Ala Ancha",
+            videoUrl: "https://cdn.pixabay.com/video/2024/12/24/248626.mp4",
         },
         {
             title: "Sombrero Llanero",
-            videoUrl: "https://photos.google.com/search/_tv_V%C3%ADdeos/photo/AF1QipMhXeQJAPNVnzbpHtWWPgmZzUlosqLDHmDdCqnY",
+            videoUrl: "https://cdn.pixabay.com/video/2024/12/24/248626.mp4",
         },
     ];
 

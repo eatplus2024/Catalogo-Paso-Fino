@@ -1,7 +1,7 @@
 // Función para redirigir a WhatsApp con mensaje automático
-function redirectToWhatsApp(productName) {
+function redirectToWhatsApp(productName, videoUrl) {
     const phoneNumber = "+573219943910";
-    const message = `Hola, quiero saber el precio de este sombrero: ${productName}`;
+    const message = `${videoUrl}\nHola, quiero saber el precio de este sombrero: ${productName}`;
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, "_blank");
 }
@@ -9,12 +9,14 @@ function redirectToWhatsApp(productName) {
 document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
-            title: "Sombrero Aguadeño Ala Ancha",
-            videoUrl: "https://cdn.pixabay.com/video/2024/12/24/248626.mp4",
+            title: "Sombrero Veguero",
+            videoUrl: "https://archive.org/embed/aguadeno-ala-ancha",
+            videoFrame: "https://www.youtube.com/embed/jxqhhSbrOz0",
         },
         {
             title: "Sombrero Llanero",
-            videoUrl: "https://cdn.pixabay.com/video/2024/12/24/248626.mp4",
+            videoUrl: "https://archive.org/embed/sombrero-llanero",
+            videoFrame: "https://www.youtube.com/embed/jxqhhSbrOz0",
         },
     ];
 
@@ -36,12 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const button = document.createElement("button");
         button.textContent = "Cotizar";
-        button.onclick = () => redirectToWhatsApp(video.title);
+        button.onclick = () => redirectToWhatsApp(video.title, video.videoUrl);
         item.appendChild(button);
 
         // Video embed
         const iframe = document.createElement("iframe");
-        iframe.src = video.videoUrl;
+        iframe.src = video.videoFrame;
         iframe.allowFullscreen = true;
         item.appendChild(iframe);
 

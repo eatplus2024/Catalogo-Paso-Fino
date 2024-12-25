@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
             title: "Sombrero Veguero",
-            videoUrl: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
-            videoFrame: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
+            videoUrl: "https://archive.org/embed/aguadeno-ala-ancha", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://archive.org/embed/aguadeno-ala-ancha" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`, // Incrustación
         },
         {
             title: "Sombrero Llanero",
-            videoUrl: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
-            videoFrame: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
+            videoUrl: "https://archive.org/embed/sombrero-llanero", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://archive.org/embed/sombrero-llanero" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`, // Incrustación
         },
     ];
 
@@ -42,10 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
         item.appendChild(button);
 
         // Video embed
-        const iframe = document.createElement("iframe");
-        iframe.src = video.videoFrame;
-        iframe.allowFullscreen = true;
-        item.appendChild(iframe);
+        const iframeContainer = document.createElement("div");
+        iframeContainer.innerHTML = video.videoFrame; // Agregamos directamente el HTML de la incrustación
+        item.appendChild(iframeContainer);
 
         gallery.appendChild(item);
     });

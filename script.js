@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
             title: "Sombrero Veguero",
-            videoUrl: "https://archive.org/embed/aguadeno-ala-ancha",
+            videoUrl: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
             videoFrame: "https://www.youtube.com/embed/jxqhhSbrOz0",
         },
         {

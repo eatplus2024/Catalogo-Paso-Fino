@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Sombrero Veguero",
             videoUrl: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
-            videoFrame: "https://www.youtube.com/embed/jxqhhSbrOz0",
+            videoFrame: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
         },
         {
             title: "Sombrero Llanero",
-            videoUrl: "https://archive.org/embed/sombrero-llanero",
-            videoFrame: "https://www.youtube.com/embed/jxqhhSbrOz0",
+            videoUrl: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
+            videoFrame: "[archiveorg aguadeno-ala-ancha width=640 height=480 frameborder=0 webkitallowfullscreen=true mozallowfullscreen=true]",
         },
     ];
 

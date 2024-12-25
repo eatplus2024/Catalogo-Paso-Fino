@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Sombrero Llanero",
             videoUrl: "https://archive.org/embed/sombrero-llanero", // Enlace para WhatsApp
-            videoFrame: `<iframe src="https://archive.org/embed/sombrero-llanero" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`, // Incrustación
+            videoFrame: `<iframe src="https://archive.org/embed/aguadeno-ala-ancha" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`, // Incrustación
         },
     ];
 

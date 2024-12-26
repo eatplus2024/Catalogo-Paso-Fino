@@ -9,14 +9,14 @@ function redirectToWhatsApp(productName, videoUrl) {
 document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
-            title: "Sombrero Veguero",
-            videoUrl: "https://youtu.be/Q5OYlpfdmkE", // Enlace para WhatsApp
-            videoFrame: `<iframe src="https://youtu.be/Q5OYlpfdmkE" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+            title: "Sombrero Borsalino",
+            videoUrl: "https://youtu.be/UK66hPYxhuo", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/UK66hPYxhuo" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
         {
-            title: "Sombrero Llanero",
-            videoUrl: "https://youtu.be/Q5OYlpfdmkE", // Enlace para WhatsApp
-            videoFrame: `<iframe src="https://youtu.be/Q5OYlpfdmkE" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+            title: "Sombrero Bullhide",
+            videoUrl: "https://youtu.be/ApnRpItCjng", // Enlace para WhatsApp
+            videoFrame: `iframe src="https://www.youtube.com/embed/ApnRpItCjng" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
     ];
 

@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
             title: "Sombrero Veguero",
-            videoUrl: "https://archive.org/embed/aguadeno-ala-ancha", // Enlace para WhatsApp
+            videoUrl: "https://dai.ly/kRqePcvaUEgiMFC7nDE", // Enlace para WhatsApp
             videoFrame: `<iframe src="https://archive.org/embed/aguadeno-ala-ancha" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`, // Incrustación
         },
         {
             title: "Sombrero Llanero",
-            videoUrl: "https://archive.org/embed/sombrero-llanero", // Enlace para WhatsApp
+            videoUrl: "https://dai.ly/kRqePcvaUEgiMFC7nDE", // Enlace para WhatsApp
             videoFrame: `<iframe src="https://archive.org/embed/aguadeno-ala-ancha" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`, // Incrustación
         },
     ];

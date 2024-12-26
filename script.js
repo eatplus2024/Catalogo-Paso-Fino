@@ -9,14 +9,49 @@ function redirectToWhatsApp(productName, videoUrl) {
 document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
-            title: "Sombrero Borsalino",
+            title: "Borsalino",
             videoUrl: "https://youtu.be/UK66hPYxhuo", // Enlace para WhatsApp
             videoFrame: `<iframe src="https://www.youtube.com/embed/UK66hPYxhuo" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
         {
-            title: "Sombrero Bullhide",
+            title: "Bullhide",
             videoUrl: "https://youtu.be/ApnRpItCjng", // Enlace para WhatsApp
             videoFrame: `<iframe src="https://www.youtube.com/embed/ApnRpItCjng" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Bullhide",
+            videoUrl: "https://youtu.be/is0E1mT7i_k", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/is0E1mT7i_k" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Criollo",
+            videoUrl: "https://youtu.be/XOj5UOzCjrI", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/XOj5UOzCjrI" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Cruchable",
+            videoUrl: "https://youtu.be/msENKr81Q00", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/msENKr81Q00" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Estilo Ranchero",
+            videoUrl: "https://youtu.be/Q5OYlpfdmkE", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/Q5OYlpfdmkE" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Aguadeño Ala Ancha",
+            videoUrl: "https://youtu.be/FcnNC89lZMc", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/FcnNC89lZMc" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Montana",
+            videoUrl: "https://youtu.be/kb28IQykA7Y", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/kb28IQykA7Y" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Montana",
+            videoUrl: "https://youtu.be/2LCOcw4yFAM", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/2LCOcw4yFAM" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
     ];
 

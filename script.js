@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Sombrero Bullhide",
             videoUrl: "https://youtu.be/ApnRpItCjng", // Enlace para WhatsApp
-            videoFrame: `iframe src="https://www.youtube.com/embed/ApnRpItCjng" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+            videoFrame: `<iframe src="https://www.youtube.com/embed/ApnRpItCjng" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
     ];
 

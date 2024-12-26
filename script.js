@@ -53,6 +53,26 @@ document.addEventListener("DOMContentLoaded", () => {
             videoUrl: "https://youtu.be/2LCOcw4yFAM", // Enlace para WhatsApp
             videoFrame: `<iframe src="https://www.youtube.com/embed/2LCOcw4yFAM" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
+        {
+            title: "Montana",
+            videoUrl: "https://youtu.be/Tmr9vjW5b4U", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/Tmr9vjW5b4U" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Montana",
+            videoUrl: "https://youtu.be/9Ur2GL3E0Ng", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/9Ur2GL3E0Ng" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Montana",
+            videoUrl: "https://youtu.be/8vzyg6634II", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/8vzyg6634II" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Montana",
+            videoUrl: "https://youtube.com/shorts/3RA6AsC_4kE?feature=share", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/3RA6AsC_4kE?feature=share" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
     ];
 
     const gallery = document.getElementById("catalog-gallery");

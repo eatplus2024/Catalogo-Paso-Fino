@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
             videoFrame: `<iframe src="https://www.youtube.com/embed/8vzyg6634II" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
         {
-            title: "Montana",
-            videoUrl: "https://youtube.com/shorts/3RA6AsC_4kE?feature=share", // Enlace para WhatsApp
-            videoFrame: `<iframe src="https://www.youtube.com/3RA6AsC_4kE?feature=share" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+            title: "Denver",
+            videoUrl: "https://youtu.be/5HSKa7WH4i0", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/5HSKa7WH4i0" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
     ];
 

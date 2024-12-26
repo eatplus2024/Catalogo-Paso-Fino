@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         {
             title: "Sombrero Veguero",
-            videoUrl: "https://www.youtube.com/watch?v=41HtWftYV7M", // Enlace para WhatsApp
-            videoFrame: `<iframe src="https://www.youtube.com/embed/41HtWftYV7M" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+            videoUrl: "https://youtu.be/Q5OYlpfdmkE", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://youtu.be/Q5OYlpfdmkE" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
         {
             title: "Sombrero Llanero",
-            videoUrl: "https://www.youtube.com/watch?v=41HtWftYV7M", // Enlace para WhatsApp
-            videoFrame: `<iframe src="https://www.youtube.com/embed/41HtWftYV7M" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+            videoUrl: "https://youtu.be/Q5OYlpfdmkE", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://youtu.be/Q5OYlpfdmkE" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
     ];
 

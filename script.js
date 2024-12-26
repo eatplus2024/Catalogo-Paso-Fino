@@ -70,8 +70,23 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             title: "Denver",
-            videoUrl: "https://youtu.be/5HSKa7WH4i0", // Enlace para WhatsApp
-            videoFrame: `<iframe src="https://www.youtube.com/5HSKa7WH4i0" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+            videoUrl: "https://https://youtu.be/5HSKa7WH4i0", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/5HSKa7WH4i0" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Rebelde",
+            videoUrl: "https://youtu.be/nInIVF2gykQ", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/nInIVF2gykQ" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Rocha Hats Mexicano",
+            videoUrl: "https://youtu.be/09bAhjiSLm4", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/09bAhjiSLm4" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Sombrero de Gamuza",
+            videoUrl: "https://youtu.be/SFbqVuy9WeU", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/SFbqVuy9WeU" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
     ];
 

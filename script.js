@@ -88,6 +88,26 @@ document.addEventListener("DOMContentLoaded", () => {
             videoUrl: "https://youtu.be/SFbqVuy9WeU", // Enlace para WhatsApp
             videoFrame: `<iframe src="https://www.youtube.com/embed/SFbqVuy9WeU" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
         },
+        {
+            title: "Sombrero en Cuero",
+            videoUrl: "https://youtu.be/ukj7KmPwg30", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/ukj7KmPwg30" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Sombrero en Cuero",
+            videoUrl: "https://youtu.be/vyxvWYey5v8", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/vyxvWYey5v8" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Texas",
+            videoUrl: "https://youtu.be/f_ionGn5nPY", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/f_ionGn5nPY" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
+        {
+            title: "Topochero",
+            videoUrl: "https://youtu.be/0RDOAn4cyOQ", // Enlace para WhatsApp
+            videoFrame: `<iframe src="https://www.youtube.com/embed/0RDOAn4cyOQ" width="640" height="480" frameborder="0" allowfullscreen></iframe>`, // Incrustación
+        },
     ];
 
     const gallery = document.getElementById("catalog-gallery");
